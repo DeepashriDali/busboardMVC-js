@@ -1,0 +1,24 @@
+<!-- views/disruptionListView.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Arrivals</title>
+</head>
+
+<body id="home">
+	<h1>Arrivals</h1>
+	<ul>
+		<%
+			data.forEach((bustime) => { %>
+			<li>
+				<h2>Arrivals at <%= bustime.stationName %></h2>
+				Bus Number <%= bustime.lineName %> to <%= bustime.destinationName %> arriving in <%= bustime.minutes %> minutes.
+				</em></p>
+			</li>
+		<% });
+		%>
+	</ul>
+</body>
+</html>
